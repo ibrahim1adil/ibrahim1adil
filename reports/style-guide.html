@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Portfolio Style Guide — Ibrahim Adil</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_css/format.css">
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+      th {
+        background-color: #1a4b8c;
+        color: #ffffff;
+        text-align: left;
+        padding: 0.6rem 0.8rem;
+      }
+      td {
+        padding: 0.55rem 0.8rem;
+        border-bottom: 1px solid #dddddd;
+        vertical-align: top;
+      }
+      tr:nth-child(even) td {
+        background-color: #f4f6f9;
+      }
+      code {
+        background-color: #eef0f4;
+        padding: 0.1rem 0.35rem;
+        border-radius: 3px;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <h1 class="site-header">Portfolio Style Guide</h1>
+
+      <nav class="main-nav" role="navigation" aria-label="main menu">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="style-guide.html" class="nav-active">Style Guide</a></li>
+        </ul>
+      </nav>
+
+      <p class="intro-text">A short reference for portfolio styles.</p>
+
+      <h2>External stylesheet</h2>
+      <p><code>_css/format.css</code> has the main page styles.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Selector</th>
+            <th>Use</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><code>body</code></td>
+            <td>Base page</td>
+            <td>Background, font, and text color.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><code>.page-wrapper</code></td>
+            <td>Layout</td>
+            <td>Center content and padding.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><code>.site-header</code></td>
+            <td>Title</td>
+            <td>Navy heading and underline.</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><code>.main-nav a</code></td>
+            <td>Nav links</td>
+            <td>Blue buttons with hover.</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><code>.intro-text</code></td>
+            <td>Intro text</td>
+            <td>Readable spacing.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Embedded styles</h2>
+      <p>Styles inside <code>index.html</code>.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Selector</th>
+            <th>Use</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><code>.nav-active</code></td>
+            <td>Current link</td>
+            <td>Highlight active nav item.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><code>.pull-quote</code></td>
+            <td>Quote block</td>
+            <td>Highlight text with border.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><code>.skills-list</code></td>
+            <td>Skills list</td>
+            <td>Flex layout, no bullets.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Inline styles</h2>
+      <p>Direct element styles in the page.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Element</th>
+            <th>Style</th>
+            <th>Effect</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><code>&lt;h1&gt;</code></td>
+            <td><code>border-top: 5px solid #f0a500;</code></td>
+            <td>Gold accent line.</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><code>.intro-text</code></td>
+            <td><code>background-color: #f9f5ff;</code></td>
+            <td>Soft background.</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><code>.styleguide-link</code></td>
+            <td><code>margin-top: 2rem;</code></td>
+            <td>Extra spacing.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Ibrahim Adil</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -6,19 +6,96 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" sizes="16x16" href="_images/kody.svg">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="_css/format.css">
+
+    <!-- embedded styles -->
+    <style>
+      /* nav active */
+      .nav-active {
+        background-color: #0d6e6e !important;
+      }
+
+      /* pull quote */
+      .pull-quote {
+        border-left: 4px solid #f0a500;
+        padding: 0.6rem 1rem;
+        background-color: #fffbf0;
+        font-style: italic;
+        color: #555555;
+        margin: 1.2rem 0;
+      }
+
+      /* skills list */
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        padding: 0;
+        list-style: none;
+        margin: 0.5rem 0 1rem 0;
+      }
+    </style>
   </head>
   <body>
-    <h1>Ibrahim Adil's Web Portfolio</h1>
-    <nav role="navigation" aria-label="main menu">
+    <div class="page-wrapper">
+
+      <!-- header accent -->
+      <h1 class="site-header" style="border-top: 5px solid #f0a500; padding-top: 0.5rem;">
+        Ibrahim Adil's Web Portfolio
+      </h1>
+
+      <nav class="main-nav" role="navigation" aria-label="main menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="labs/lab/html_lab/index.html">HTML Lab</a></li>
-            <li><a href="labs/lab/html_lab/simple.html">Simple HTML</a></li>
-            <li><a href="labs/lab/html_lab/fall.html">Fall HTML</a></li>
-            <li><a href="labs/lab/link_lab/index.html">Link Lab</a></li>
+          <li><a href="index.html" class="nav-active">Home</a></li>
+          <li><a href="labs/lab/html_lab/index.html">HTML Lab</a></li>
+          <li><a href="labs/lab/html_lab/simple.html">Simple HTML</a></li>
+          <li><a href="labs/lab/html_lab/fall.html">Fall HTML</a></li>
+          <li><a href="labs/lab/link_lab/index.html">Link Lab</a></li>
+          <li><a href="reports/style-guide.html">Style Guide</a></li>
         </ul>
-    </nav>
-    <p>Hi, I'm Ibrahim Adil. I like to code and build websites. 
-    This portfolio showcases my work from IT-WEB 112.</p>
+      </nav>
+
+      <!-- intro -->
+      <p class="intro-text" style="background-color: #f9f5ff; padding: 1rem; border-radius: 6px;">
+        Hi, I'm Ibrahim Adil. I like to code and build websites.
+        This portfolio showcases my work from IT-WEB 112.
+      </p>
+
+      <div class="pull-quote">
+        "Building the web one tag at a time."
+      </div>
+
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li><span class="skill-badge">HTML5</span></li>
+        <li><span class="skill-badge">CSS3</span></li>
+        <li><span class="skill-badge">Git &amp; GitHub</span></li>
+        <li><span class="skill-badge">VS Code</span></li>
+        <li><span class="skill-badge">Web Accessibility</span></li>
+      </ul>
+
+      <h2>Projects</h2>
+      <div class="card">
+        <p class="card-title">HTML Lab</p>
+        <p>Practice with core HTML elements including headings, lists, links, and semantic structure.</p>
+      </div>
+      <div class="card">
+        <p class="card-title">Link Lab</p>
+        <p>Exploring internal and external hyperlinks across a multi-page site structure.</p>
+      </div>
+
+      <!-- style guide -->
+      <a class="styleguide-link" href="reports/style-guide.html"
+         style="margin-top: 2rem; font-size: 1rem;">
+        📄 View Portfolio Style Guide
+      </a>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Ibrahim Adil &mdash; IT-WEB 112</p>
+      </footer>
+
+    </div>
   </body>
 </html>
