@@ -1,0 +1,38 @@
+/************************************************ 
+              PRZ Positioning CSS
+   (see PRZ_Style_Guide - Positioning document)
+*************************************************/
+
+/* Positioning of the Header, Nav, Main, Footer */
+body {
+    position: relative;
+    min-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    flex: 0 0 100%;
+}
+
+nav {
+    flex: 0 0 150px;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex: 0 0 100%;
+}
+/* End Positioning of the Header, Nav, Main, Footer */
+
+
+/* Positioning of Client Login Nav box */
+nav#client {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+/* End Positioning of Client Login Nav box */
