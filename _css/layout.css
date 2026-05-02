@@ -1,0 +1,131 @@
+/* layout.css */
+/* layout rules for my portfolio site */
+/* Ibrahim Adil - IT-WEB 112 */
+
+
+/* makes width math easier when using padding */
+* {
+    box-sizing: border-box;
+}
+
+
+/* body so the footer can stick to the bottom */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* main page wrapper - centers everything */
+.page-wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1;
+}
+
+
+/* header at the top */
+.site-header {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+/* nav bar */
+.main-nav {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* puts nav links in a row that wraps */
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+/* main content area */
+main {
+    width: 100%;
+}
+
+
+/* project cards next to each other */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+
+/* each card grows to fill the row but won't get smaller than 250px */
+.project-grid .card {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 0;
+}
+
+
+/* skill badges in a row */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 0;
+    margin: 10px 0 15px 0;
+    list-style: none;
+}
+
+
+/* footer at the bottom */
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+/* keep images from overflowing the page */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* tablet - smaller padding */
+@media (max-width: 800px) {
+    .page-wrapper {
+        padding: 15px;
+    }
+    .project-grid .card {
+        min-width: 200px;
+    }
+}
+
+
+/* phone - stack everything in one column */
+@media (max-width: 500px) {
+    .main-nav ul {
+        flex-direction: column;
+    }
+    .main-nav a {
+        display: block;
+        text-align: center;
+    }
+    .project-grid {
+        flex-direction: column;
+    }
+    .site-header {
+        font-size: 1.5rem;
+    }
+}
