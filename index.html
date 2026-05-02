@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" sizes="16x16" href="_images/kody.svg">
 
-    <!-- stylesheet -->
+    <!-- stylesheets -->
     <link rel="stylesheet" href="_css/format.css">
+    <link rel="stylesheet" href="_css/layout.css">
 
     <!-- embedded styles -->
     <style>
@@ -25,16 +26,6 @@
         font-style: italic;
         color: #555555;
         margin: 1.2rem 0;
-      }
-
-      /* skills list */
-      .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-        padding: 0;
-        list-style: none;
-        margin: 0.5rem 0 1rem 0;
       }
     </style>
   </head>
@@ -57,40 +48,48 @@
         </ul>
       </nav>
 
-      <!-- intro -->
-      <p class="intro-text" style="background-color: #f9f5ff; padding: 1rem; border-radius: 6px;">
-        Hi, I'm Ibrahim Adil. I like to code and build websites.
-        This portfolio showcases my work from IT-WEB 112.
-      </p>
+      <main>
+        <!-- intro -->
+        <p class="intro-text" style="background-color: #f9f5ff; padding: 1rem; border-radius: 6px;">
+          Hi, I'm Ibrahim Adil. I like to code and build websites.
+          This portfolio showcases my work from IT-WEB 112.
+        </p>
 
-      <div class="pull-quote">
-        "Building the web one tag at a time."
-      </div>
+        <div class="pull-quote">
+          "Building the web one tag at a time."
+        </div>
 
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li><span class="skill-badge">HTML5</span></li>
-        <li><span class="skill-badge">CSS3</span></li>
-        <li><span class="skill-badge">Git &amp; GitHub</span></li>
-        <li><span class="skill-badge">VS Code</span></li>
-        <li><span class="skill-badge">Web Accessibility</span></li>
-      </ul>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li><span class="skill-badge">HTML5</span></li>
+          <li><span class="skill-badge">CSS3</span></li>
+          <li><span class="skill-badge">Git &amp; GitHub</span></li>
+          <li><span class="skill-badge">VS Code</span></li>
+          <li><span class="skill-badge">Web Accessibility</span></li>
+        </ul>
 
-      <h2>Projects</h2>
-      <div class="card">
-        <p class="card-title">HTML Lab</p>
-        <p>Practice with core HTML elements including headings, lists, links, and semantic structure.</p>
-      </div>
-      <div class="card">
-        <p class="card-title">Link Lab</p>
-        <p>Exploring internal and external hyperlinks across a multi-page site structure.</p>
-      </div>
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="card">
+            <p class="card-title">HTML Lab</p>
+            <p>Practice with core HTML elements including headings, lists, links, and semantic structure.</p>
+          </div>
+          <div class="card">
+            <p class="card-title">Link Lab</p>
+            <p>Exploring internal and external hyperlinks across a multi-page site structure.</p>
+          </div>
+          <div class="card">
+            <p class="card-title">Site Layout</p>
+            <p>A layout I built using Flexbox and media queries so it works on phones and computers.</p>
+          </div>
+        </div>
 
-      <!-- style guide -->
-      <a class="styleguide-link" href="reports/style-guide.html"
-         style="margin-top: 2rem; font-size: 1rem;">
-        📄 View Portfolio Style Guide
-      </a>
+        <!-- style guide -->
+        <a class="styleguide-link" href="reports/style-guide.html"
+           style="margin-top: 2rem; font-size: 1rem;">
+          📄 View Portfolio Style Guide
+        </a>
+      </main>
 
       <footer class="site-footer">
         <p>&copy; 2026 Ibrahim Adil &mdash; IT-WEB 112</p>
