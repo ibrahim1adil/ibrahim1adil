@@ -3,29 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Style Guide</title>
+    <title>Website Style Guide - Ibrahim Adil</title>
     <link rel="stylesheet" href="../_css/format.css">
+    <link rel="stylesheet" href="../_css/layout.css">
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="site-header">Website Style Guide - yourname</header>
-        <p><strong>updated:</strong> April 5, 26</p>
+        <h1 class="site-header">Website Style Guide</h1>
 
-        <h2>Overall Formatting</h2>
-        <p>The overall site colors are</p>
-        <p>The general font-family for the site is … with backup fonts …. The general text size is …</p>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../labs/lab/html_lab/index.html">HTML Lab</a></li>
+                <li><a href="../labs/lab/link_lab/index.html">Link Lab</a></li>
+                <li><a href="style-guide.html" class="nav-active" style="background-color:#0d6e6e;">Style Guide</a></li>
+            </ul>
+        </nav>
 
-        <h2>Site Header / Branding</h2>
-        <p>The header area font is.</p>
+        <main>
+            <p><strong>Updated:</strong> May 1, 2026</p>
 
-        <h2>Navigation Links</h2>
-        <p>Site navigation uses the font-family...</p>
+            <h2>Overall Formatting</h2>
+            <p>
+                The site colors are mostly blue and teal gold accent line.
+                background color is a light blue-gray (#f4f6f9) and most of
+                the text is dark gray (#222). White for the project cards.
+            </p>
+            <p>
+                font for the whole site is Segoe UI with backups like Tahoma,
+                Geneva, and Verdana. The text size is the browser default 
+                and headings are bigger.
+            </p>
+            <p>The main colors I used:</p>
+            <ul>
+                <li>#f4f6f9 - page background</li>
+                <li>#1a4b8c - main blue (used in the header/nav buttons)</li>
+                <li>#0d6e6e - teal (used for the h2 headings/the active nav link)</li>
+                <li>#f0a500 - gold accent line on top of the header</li>
+                <li>#222222 - body text</li>
+                <li>#888888 - footer text</li>
+            </ul>
 
-        <h2>Content Section</h2>
-        <p>The webpage content section uses padding and margin of …</p>
+            <h2>Site Header</h2>
+            <p>
+                The header is an h1 with class .site-header. uses the main
+                blue (#1a4b8c) at 2.2rem with a 3px blue line under it and a 5px
+                gold line on top. On phones it goes down to 1.5rem so it can fit
+                better.
+            </p>
 
-        <h2>Site Footer</h2>
-        <p>The footer has a background color of …</p>
+            <h2>Navigation Links</h2>
+            <p>
+                The nav links are in the nav element. They're blue rounded
+                buttons with white text. When you hover over a link it turns a
+                lighter blue, and the link for the page you are on's teal.
+                The nav uses Flexbox so the buttons line up in a row, and on
+                phones so they stack on top of each other instead.
+            </p>
+
+            <h2>Content Section</h2>
+            <p>
+                The content goes inside a div called .page-wrapper that is
+                centered on the page with a max-width of 1000px so it doesn't
+                get too long on bigger screens. There is 20px of padding around
+                the content (15px on tablets).
+            </p>
+            <p>
+                Section headings (h2) are teal with a teal line on the left.
+                Project cards are white with a small shadow and rounded corners.
+                I put them in a div called .project-grid that uses Flexbox so
+                the cards sit next to each other on big screens and stack on
+                phones.
+            </p>
+
+            <h2>Site Footer</h2>
+            <p>
+                The footer has small gray text (0.8rem, color #888) with a thin
+                line on top. It is centered. Because the body uses display: flex
+                with flex-direction: column and the page-wrapper has flex: 1,
+                the footer stays at the bottom of the page even when there
+                isn't much content.
+            </p>
+
+            <h2>Layout and Responsive Design</h2>
+            <p>
+                I made a new file called <strong>layout.css</strong> in the _css
+                folder that has the layout rules for the site. It is linked on
+                every page after format.css. The layout.css file has more than
+                10 rules for the header, nav, main, project grid, skills list,
+                footer, and images, plus two media queries.
+            </p>
+            <p>I used three responsive web design ideas:</p>
+            <ol>
+                <li>
+                    <strong>Media queries</strong> at two breakpoints. At 800px
+                    the padding gets smaller. At 500px the nav links stack into
+                    a column and the project cards go to one column.
+                </li>
+                <li>
+                    <strong>Flexbox with flex-wrap</strong> on the nav and the
+                    project grid so the items move to a new row on their own
+                    when the screen gets smaller.
+                </li>
+                <li>
+                    <strong>Flexible images</strong> with
+                    <code>img { max-width: 100%; height: auto; }</code> so any
+                    image will shrink to fit and not overflow the page.
+                </li>
+            </ol>
+
+            <p><a class="styleguide-link" href="../index.html">&larr; Back to portfolio</a></p>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Ibrahim Adil &mdash; IT-WEB 112</p>
+        </footer>
     </div>
 </body>
 </html>
