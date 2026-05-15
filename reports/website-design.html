@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design Document — Under the Sky</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Extras not in the shared reports/styles.css */
+    .card {
+      background: #161d30;
+      border: 1px solid #2a3148;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 1rem 0;
+    }
+    pre {
+      margin: 0;
+      font-family: "Courier New", Consolas, monospace;
+      font-size: 0.85rem;
+      color: #c9d1d9;
+      white-space: pre-wrap;
+      word-break: break-word;
+      line-height: 1.5;
+    }
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 0.4rem; }
+    ul li::marker { color: #e8c547; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #2a3148;
+      vertical-align: top;
+    }
+    th {
+      color: #e8c547;
+      font-style: italic;
+      font-weight: normal;
+    }
+    .mono {
+      font-family: "Courier New", Consolas, monospace;
+      font-size: 0.85rem;
+      color: #c9d1d9;
+    }
+    .sketch { margin: 1rem 0; }
+    .sketch img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #2a3148;
+      border-radius: 8px;
+      background: #fbf6e8;
+    }
+    .sketch figcaption {
+      margin-top: 0.5rem;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #C9D1D9;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <header>
+      <p class="eyebrow">Report 02 · Development &amp; Design</p>
+      <h1>Website Design Document for <em>Under the Sky</em></h1>
+    </header>
+
+    <section>
+      <h2>Development Guide</h2>
+
+      <h3>Site Directory Structure</h3>
+      <div class="card">
+<pre>under-the-sky/
+├── index.html
+├── about.html
+├── contact.html
+├── map.html
+├── gallery/
+│   ├── stars.html
+│   ├── hikes.html
+│   ├── waterfalls.html
+│   ├── canyons.html
+│   └── locations/   (one page per spot)
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── images/
+    ├── stars/  hikes/  waterfalls/  canyons/
+    └── icons/</pre>
+      </div>
+
+      <h3>Main Navigation</h3>
+      <p>Top-level pages linked in the header on every page:</p>
+      <ul>
+        <li>Home</li>
+        <li>Gallery — Stars, Hikes, Waterfalls, Canyons (each links to its location pages)</li>
+        <li>Map</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <p>Each category page links to its individual location pages. Every page returns to Home via the logo.</p>
+
+      <h3>HTML Template</h3>
+      <div class="card">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Page — Under the Sky&lt;/title&gt;
+  &lt;link rel="stylesheet" href="/css/style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class="site-header"&gt; &lt;!-- identity --&gt;
+    &lt;a href="/index.html" class="logo"&gt;Under the Sky&lt;/a&gt;
+  &lt;/header&gt;
+
+  &lt;nav class="main-nav"&gt; &lt;!-- navigation --&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="/index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/gallery/stars.html"&gt;Stars&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/gallery/hikes.html"&gt;Hikes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/gallery/waterfalls.html"&gt;Waterfalls&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/gallery/canyons.html"&gt;Canyons&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/map.html"&gt;Map&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="/contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+
+  &lt;main class="content"&gt; &lt;!-- content --&gt;
+    &lt;h1&gt;Page Heading&lt;/h1&gt;
+  &lt;/main&gt;
+
+  &lt;footer class="site-footer"&gt;&amp;copy; 2026 Under the Sky&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+
+      <h3>Wire Frame Pages</h3>
+      <ul>
+        <li>Home — featured photo, intro, category links</li>
+        <li>Stars / Hikes / Waterfalls / Canyons — category intro and photo grid</li>
+        <li>Location page — photo, story, rating, back link</li>
+        <li>Map — pins for all locations</li>
+        <li>About — short bio</li>
+        <li>Contact — suggestion form</li>
+      </ul>
+
+      <h3>Interactivity <em>(optional)</em></h3>
+      <ul>
+        <li>Lightbox for full-size photos</li>
+        <li>Contact form for spot suggestions</li>
+        <li>Interactive map with location pins</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Design Guide</h2>
+
+      <h3>Layout / Storyboard</h3>
+      <p>Hand sketch of the three main page layouts — home, category, and individual location:</p>
+      <figure class="sketch">
+        <img src="layout-sketch.png" alt="Hand-drawn wireframe sketches showing layouts for the home page, category page, and individual location page" />
+        <figcaption>Pen-and-paper layouts for the three main page types.</figcaption>
+      </figure>
+      <p>In short:</p>
+      <ul>
+        <li>Home — featured image at top, intro text, category links below</li>
+        <li>Category — title, short intro, responsive photo grid</li>
+        <li>Location — large image, story and rating side-by-side (stacked on mobile)</li>
+      </ul>
+
+      <h3>Color Palette</h3>
+      <p>Pulled from the Mt. Rainier Skyline study in <em>Report 01</em> — deep navy as the base, slate purple for depth, light gray for legible text, and warm gold as the single accent.</p>
+      <div class="palette">
+        <div class="swatch-block stars-1">#0B1426</div>
+        <div class="swatch-block stars-2">#1F2A44</div>
+        <div class="swatch-block stars-3">#4A4E69</div>
+        <div class="swatch-block stars-4">#C9D1D9</div>
+        <div class="swatch-block stars-5">#E8C547</div>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Hex</th><th>Use</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Deep Navy</td><td class="mono">#0B1426</td><td>Main background</td></tr>
+          <tr><td>Midnight Blue</td><td class="mono">#1F2A44</td><td>Cards, section backgrounds</td></tr>
+          <tr><td>Slate Purple</td><td class="mono">#4A4E69</td><td>Borders, secondary text</td></tr>
+          <tr><td>Mist Gray</td><td class="mono">#C9D1D9</td><td>Body text</td></tr>
+          <tr><td>Warm Gold</td><td class="mono">#E8C547</td><td>Links, accents, ratings</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Style Guide</h3>
+      <table>
+        <thead>
+          <tr><th>Selector</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">body</td><td>Base font, background, default text color</td></tr>
+          <tr><td class="mono">header, nav</td><td>Sticky top, logo and links</td></tr>
+          <tr><td class="mono">.hero</td><td>Full-width featured image with overlay</td></tr>
+          <tr><td class="mono">.gallery-grid</td><td>Responsive grid (1 / 2 / 3 columns)</td></tr>
+          <tr><td class="mono">.photo-card</td><td>Image, caption, hover effect</td></tr>
+          <tr><td class="mono">.location-page</td><td>Image + story layout</td></tr>
+          <tr><td class="mono">footer</td><td>Background, small text</td></tr>
+          <tr><td class="mono">@media mobile</td><td>Stack nav and grid for small screens</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Media Assets</h3>
+      <table>
+        <thead>
+          <tr><th>Asset</th><th>Format</th><th>Source</th><th>License</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Photos (stars, hikes, waterfalls, canyons)</td><td>JPG</td><td>Personal</td><td>Original work</td></tr>
+          <tr><td>Logo and icons</td><td>SVG</td><td>In-house / Lucide</td><td>Original / ISC</td></tr>
+          <tr><td>Map tiles</td><td>Tiles</td><td>OpenStreetMap</td><td>ODbL (attribution)</td></tr>
+          <tr><td>Fonts</td><td>WOFF2</td><td>Google Fonts</td><td>Open Font License</td></tr>
+        </tbody>
+      </table>
+      <p>All photos are original. Each image has descriptive alt text for accessibility.</p>
+    </section>
+
+  </main>
+</body>
+</html>
